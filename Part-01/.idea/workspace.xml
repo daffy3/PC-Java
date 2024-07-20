@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d2a8e2e-783f-485f-b538-e971e65ce99e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ch05/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch05/OrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch05/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch05/UserInfoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch06/Intro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch06/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch06/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch06/SubjectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,12 +49,13 @@
     "애플리케이션.Main.executor": "Run",
     "애플리케이션.OrderTest.executor": "Run",
     "애플리케이션.StudentTest.executor": "Run",
+    "애플리케이션.SubjectTest.executor": "Run",
     "애플리케이션.UserInfoTest.executor": "Run",
     "애플리케이션.ch04.StudentTest.executor": "Run",
     "애플리케이션.ch05.UserInfoTest.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.OrderTest">
+  <component name="RunManager" selected="애플리케이션.SubjectTest">
     <configuration name="OrderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ch05.OrderTest" />
       <module name="Part-01" />
@@ -68,12 +69,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch03.StudentTest" />
+    <configuration name="SubjectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch06.SubjectTest" />
       <module name="Part-01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch03.*" />
+          <option name="PATTERN" value="ch06.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.SubjectTest" />
         <item itemvalue="애플리케이션.OrderTest" />
         <item itemvalue="애플리케이션.ch05.UserInfoTest" />
         <item itemvalue="애플리케이션.UserInfoTest" />
         <item itemvalue="애플리케이션.ch04.StudentTest" />
-        <item itemvalue="애플리케이션.StudentTest" />
       </list>
     </recent_temporary>
   </component>
