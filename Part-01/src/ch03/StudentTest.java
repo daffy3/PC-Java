@@ -15,5 +15,8 @@ public class StudentTest {
         studentKim.studentName = "Kim";
         studentKim.address = "경기도 성남시 분당구 정자동";
         studentKim.showStudentInfo(); // 10020학번 학생의 이름은 Kim이고, 주소는 경기도 성남시 분당구 정자동입니다.
+
+        System.out.println(studentLee); // ch03.Student@5caf905d
+        System.out.println(studentKim); // ch03.Student@27716f4
     }
 }
