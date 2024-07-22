@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d2a8e2e-783f-485f-b538-e971e65ce99e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ch12/ArrayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch12/CharArrTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch12/Intro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch13/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch13/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch13/Intro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch13/ObjectCopyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +47,13 @@
     "settings.editor.selected.configurable": "Errors",
     "애플리케이션.ArrayTest.executor": "Run",
     "애플리케이션.BirthdayTest.executor": "Run",
+    "애플리케이션.BookTest.executor": "Run",
     "애플리케이션.CharArrTest.executor": "Run",
     "애플리케이션.CompanyTest.executor": "Run",
     "애플리케이션.EmployeeTest.executor": "Run",
     "애플리케이션.FunctionTest.executor": "Run",
     "애플리케이션.Main.executor": "Run",
+    "애플리케이션.ObjectCopyTest.executor": "Run",
     "애플리케이션.OrderTest.executor": "Run",
     "애플리케이션.Person.executor": "Run",
     "애플리케이션.StudentTest.executor": "Run",
@@ -61,13 +64,26 @@
     "애플리케이션.ch05.UserInfoTest.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.CharArrTest">
+  <component name="RunManager" selected="애플리케이션.ObjectCopyTest">
     <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ch12.ArrayTest" />
       <module name="Part-01" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ch12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch13.BookTest" />
+      <module name="Part-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,25 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch10.EmployeeTest" />
+    <configuration name="ObjectCopyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch13.ObjectCopyTest" />
       <module name="Part-01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TakeTransTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch09.TakeTransTest" />
-      <module name="Part-01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch09.*" />
+          <option name="PATTERN" value="ch13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.ObjectCopyTest" />
+        <item itemvalue="애플리케이션.BookTest" />
         <item itemvalue="애플리케이션.CharArrTest" />
         <item itemvalue="애플리케이션.ArrayTest" />
         <item itemvalue="애플리케이션.CompanyTest" />
-        <item itemvalue="애플리케이션.EmployeeTest" />
-        <item itemvalue="애플리케이션.TakeTransTest" />
       </list>
     </recent_temporary>
   </component>
