@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d2a8e2e-783f-485f-b538-e971e65ce99e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ch14/ArrayListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch14/Intro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch14/TwoDimensionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch15/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch15/StudentSubjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch15/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6d2a8e2e-783f-485f-b538-e971e65ce99e" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
