@@ -25,5 +25,5 @@ public class RestApiController {
         System.out.println(student);
         return student;
     }
-    
+
 }
