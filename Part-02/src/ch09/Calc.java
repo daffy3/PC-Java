@@ -6,7 +6,7 @@ public interface Calc {
 
     int add(int num1, int num2);
 
-    int substract(int num1, int num2);
+    int subtract(int num1, int num2);
 
     int times(int num1, int num2);
 

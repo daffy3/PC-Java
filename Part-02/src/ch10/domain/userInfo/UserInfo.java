@@ -1,4 +1,4 @@
-package ch13.domain.userInfo;
+package ch10.domain.userInfo;
 
 public class UserInfo {
     private String userId;

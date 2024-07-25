@@ -1,7 +1,7 @@
-package ch13.domain.userInfo.dao.oracle;
+package ch10.domain.userInfo.dao.oracle;
 
-import ch13.domain.userInfo.UserInfo;
-import ch13.domain.userInfo.dao.UserInfoDao;
+import ch10.domain.userInfo.UserInfo;
+import ch10.domain.userInfo.dao.UserInfoDao;
 
 public class UserInfoOracleDao implements UserInfoDao {
     @Override
