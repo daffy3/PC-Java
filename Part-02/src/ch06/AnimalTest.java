@@ -1,4 +1,4 @@
-package ch05;
+package ch06;
 
 import java.util.ArrayList;
 
@@ -48,9 +48,9 @@ public class AnimalTest {
         Animal eAnimal = new Eagle();
 
         AnimalTest test = new AnimalTest();
-        test.moveAnimal(hAnimal);
-        test.moveAnimal(hAnimal);
-        test.moveAnimal(hAnimal);
+//        test.moveAnimal(hAnimal);
+//        test.moveAnimal(hAnimal);
+//        test.moveAnimal(hAnimal);
 
         // 다형성
         ArrayList<Animal> animalList = new ArrayList<>();
@@ -61,10 +61,28 @@ public class AnimalTest {
         for (Animal animal : animalList) {
             animal.move();
         }
+
+        test.testDownCasting(animalList);
+    }
+
+    public void testDownCasting(ArrayList<Animal> list) {
+        for (int i = 0; i < list.size(); i++) {
+            Animal animal = list.get(i);
+
+            if (animal instanceof Human human) {
+                human.readBook();
+            } else if (animal instanceof Tiger tiger) {
+                tiger.hunting();
+            } else if (animal instanceof Eagle eagle) {
+                eagle.fly();
+            }
+        }
+
     }
 
     public void moveAnimal(Animal animal) {
         animal.move();
         // 단, 여기서 각각의 클래스 내부에 있는 override된 함수는 접근할 수 없어서 다운캐스팅을 진행해주어야 한다.
+
     }
 }
