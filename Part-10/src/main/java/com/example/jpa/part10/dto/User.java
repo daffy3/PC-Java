@@ -1,11 +1,12 @@
 package com.example.jpa.part10.dto;
 
-import jakarta.validation.constraints.*;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 public class User {
+    @NotBlank
     private String name;
 
     @Max(value = 90)
@@ -14,16 +15,8 @@ public class User {
     @Email
     private String email;
 
-    @Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$", message = "휴대폰 번호의 양식이 맞지 않습니다.")
+    @Pattern(regexp = "^\\d{2,3}-\\d{3,4}-\\d{4}$", message = "휴대폰 번호의 양식이 올바르지 않습니다. 01x-xxx(x)-xxxx")
     private String phoneNumber;
-
-
-    @Size(min = 6, max = 6)
-    private String reqYearMonth; // yyyy-mm
-
-    public String getReqYearMonth() {
-        return reqYearMonth;
-    }
 
     public String getName() {
         return name;
@@ -57,16 +50,6 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    @AssertTrue(message = "yyyyMM 형식에 맞지 않습니다.")
-    public boolean isReqYearMonthValid() {
-        try {
-            LocalDate localDate = LocalDate.parse(getReqYearMonth() + "01", DateTimeFormatter.ofPattern("yyyyMMdd"));
-        } catch (Exception error) {
-            return false;
-        }
-        return true;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -74,7 +57,6 @@ public class User {
                 ", age=" + age +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", reqYearMonth='" + reqYearMonth + '\'' +
                 '}';
     }
 }
