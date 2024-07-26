@@ -25,4 +25,10 @@ public class Intro {
     // - @Min: 최소 값
     // - @AssertTrue / False: 별도 logic 적용
     // - @Valid: 해당 object validation 실행
+    
+    // ====================================================================================================
+    
+    // Spring Exception 처리
+    // @ControllerAdvice: Global 예외처리 및 특정 package, Controller 예외처리
+    // @ExceptionHandler: 특정 Controller의 예외처리
 }
