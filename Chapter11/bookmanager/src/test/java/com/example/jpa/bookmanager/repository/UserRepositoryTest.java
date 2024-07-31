@@ -42,11 +42,11 @@ class UserRepositoryTest {
         System.out.println(exists); // true
 
         // 특정 아이디 값에 관한 데이터 삭제
-         userRepository.delete(userRepository.findById(1L).orElse(null));
-         userRepository.delete(userRepository.findById(5L).orElseThrow(RuntimeException::new));
-         userRepository.deleteById(1L);
+        userRepository.delete(userRepository.findById(1L).orElse(null));
+        userRepository.delete(userRepository.findById(5L).orElseThrow(RuntimeException::new));
+        userRepository.deleteById(1L);
 
-         userRepository.findAll().forEach(System.out::println);
+        userRepository.findAll().forEach(System.out::println);
 
         // ====================================================================================================
 
@@ -78,6 +78,20 @@ class UserRepositoryTest {
         Example<User> example2 = Example.of(user6, matcher2);
 
         userRepository.findAll(example2).forEach(System.out::println);
+
+    }
+
+    @Test
+    void select() {
+        User user1 = userRepository.save(new User(1, "martin", "martin@gmail.com", LocalDateTime.now(), LocalDateTime.now()));
+        User user2 = userRepository.save(new User(2, "dennis", "dennis@gmail.com", LocalDateTime.now(), LocalDateTime.now()));
+        User user3 = userRepository.save(new User(3, "sophia", "sophia@slow.com", LocalDateTime.now(), LocalDateTime.now()));
+        User user4 = userRepository.save(new User(4, "james", "james@slow.com", LocalDateTime.now(), LocalDateTime.now()));
+        User user5 = userRepository.save(new User(5, "martin", "martin@another.com", LocalDateTime.now(), LocalDateTime.now()));
+
+        userRepository.saveAll(Lists.newArrayList(user1, user2, user3, user4, user5));
+
+        System.out.println(userRepository.findByName("dennis"));
     }
 
 }
