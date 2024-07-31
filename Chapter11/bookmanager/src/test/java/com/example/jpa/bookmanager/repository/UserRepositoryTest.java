@@ -42,23 +42,23 @@ class UserRepositoryTest {
         System.out.println(exists); // true
 
         // 특정 아이디 값에 관한 데이터 삭제
-        // userRepository.delete(userRepository.findById(1L).orElse(null));
-        // userRepository.delete(userRepository.findById(5L).orElseThrow(RuntimeException::new));
-        // userRepository.deleteById(1L);
+         userRepository.delete(userRepository.findById(1L).orElse(null));
+         userRepository.delete(userRepository.findById(5L).orElseThrow(RuntimeException::new));
+         userRepository.deleteById(1L);
 
-        // userRepository.findAll().forEach(System.out::println);
+         userRepository.findAll().forEach(System.out::println);
 
         // ====================================================================================================
 
-//        Page<User> users = userRepository.findAll(PageRequest.of(1, 3));
-//        System.out.println("page: " + users);
-//        System.out.println("total elements: " + users.getTotalElements());
-//        System.out.println("total pages: " + users.getTotalPages());
-//        System.out.println("Number of elements: " + users.getNumberOfElements());
-//        System.out.println("sort: " + users.getSort());
-//        System.out.println("size: " + users.getSize());
+        Page<User> users = userRepository.findAll(PageRequest.of(1, 3));
+        System.out.println("page: " + users);
+        System.out.println("total elements: " + users.getTotalElements());
+        System.out.println("total pages: " + users.getTotalPages());
+        System.out.println("Number of elements: " + users.getNumberOfElements());
+        System.out.println("sort: " + users.getSort());
+        System.out.println("size: " + users.getSize());
 
-//        users.getContent().forEach(System.out::println);
+        users.getContent().forEach(System.out::println);
 
         // ====================================================================================================
 
