@@ -17,7 +17,7 @@ public class User {
     // @ToString은 toString() 메서드를 자동으로 오버라이딩해서 생성해주는 Lombok의 애너테이션이다.
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NonNull
