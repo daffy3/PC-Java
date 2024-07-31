@@ -1,4 +1,4 @@
-package org.daffy3.jpa.bookmanager;
+package com.example.jpa.bookmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
