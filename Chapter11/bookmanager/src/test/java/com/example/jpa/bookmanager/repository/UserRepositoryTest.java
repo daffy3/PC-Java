@@ -5,9 +5,7 @@ import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -52,16 +50,34 @@ class UserRepositoryTest {
 
         // ====================================================================================================
 
-        Page<User> users = userRepository.findAll(PageRequest.of(1, 3));
-        System.out.println("page: " + users);
-        System.out.println("total elements: " + users.getTotalElements());
-        System.out.println("total pages: " + users.getTotalPages());
-        System.out.println("Number of elements: " + users.getNumberOfElements());
-        System.out.println("sort: " + users.getSort());
-        System.out.println("size: " + users.getSize());
+//        Page<User> users = userRepository.findAll(PageRequest.of(1, 3));
+//        System.out.println("page: " + users);
+//        System.out.println("total elements: " + users.getTotalElements());
+//        System.out.println("total pages: " + users.getTotalPages());
+//        System.out.println("Number of elements: " + users.getNumberOfElements());
+//        System.out.println("sort: " + users.getSort());
+//        System.out.println("size: " + users.getSize());
 
-        users.getContent().forEach(System.out::println);
+//        users.getContent().forEach(System.out::println);
 
+        // ====================================================================================================
+
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withIgnorePaths("name")
+                .withMatcher("email", ExampleMatcher.GenericPropertyMatchers.endsWith());
+
+        Example<User> example = Example.of(new User("ma", "gmail.com"), matcher);
+        userRepository.findAll(example).forEach(System.out::println);
+
+        // ====================================================================================================
+
+        User user6 = new User();
+        user6.setEmail("slow");
+
+        ExampleMatcher matcher2 = ExampleMatcher.matching().withMatcher("email", ExampleMatcher.GenericPropertyMatchers.contains());
+        Example<User> example2 = Example.of(user6, matcher2);
+
+        userRepository.findAll(example2).forEach(System.out::println);
     }
 
 }
