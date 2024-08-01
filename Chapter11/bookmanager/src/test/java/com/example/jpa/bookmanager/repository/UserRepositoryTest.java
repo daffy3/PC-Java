@@ -1,5 +1,6 @@
 package com.example.jpa.bookmanager.repository;
 
+import com.example.jpa.bookmanager.domain.Gender;
 import com.example.jpa.bookmanager.domain.User;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
@@ -118,4 +119,18 @@ class UserRepositoryTest {
         System.out.println("findByCreatedAtGreaterThan(): " + userRepository.findByCreatedAtGreaterThan(LocalDateTime.now().minusDays(1L)));
     }
 
+    @Test
+    void insertAndUpdateTest() {
+        User user = new User();
+        user.setName("marco");
+        user.setEmail("marco@gmail.com");
+
+        userRepository.save(user);
+
+        User user2 = userRepository.findById(1L).orElseThrow(RuntimeException::new);
+        user2.setName("marrrrrrco");
+
+        userRepository.save(user2);
+    }
+    
 }

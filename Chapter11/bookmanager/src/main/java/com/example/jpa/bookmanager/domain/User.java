@@ -17,7 +17,7 @@ public class User {
     // @ToString은 toString() 메서드를 자동으로 오버라이딩해서 생성해주는 Lombok의 애너테이션이다.
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long id;
 
     @NonNull
@@ -25,7 +25,11 @@ public class User {
     @NonNull
     private String email;
     // createdAt과 updatedAt 생성된 시간과 수정된 시간은 JPA 도메인 객체에는 항상 포함되게 되어 있다.
+
+    @Column(updatable = false)
     private LocalDateTime createdAt;
+
+    @Column(insertable = false)
     private LocalDateTime updatedAt;
 
     // 생성자 관련 애너테이션 3가지
@@ -37,8 +41,48 @@ public class User {
 
     // @Data 애너테이션은 @Getter / @Setter / @ToString을 포함한다고만 일단은 이해하자.
     // @Builder 애너테이션 AllArgsConstructor와 비슷하게 객체를 생성하고 필드 값을 주입해주는데 build의 형식을 가지고 제공해준다.
-    // @Entity: 자바 객체라는 것을 Entity --> Primary Keu, PK가 반드시 필요하다.
+    // @Entity: 자바 객체라는 것을 Entity --> Primary Key, PK가 반드시 필요하다.
     //          GeneratedValue는 값을 순차적으로 증가시켜주도록 한다.
 
     // 해당 객체는 어떻게 저장하고, 어떻게 조회할 수 있을까? --> Repository를 생성해서 해결한다.
+
+    // ====================================================================================================
+
+    // @Table과 Entitu는 1:1 같은 이름으로 매핑되는 것이 좋다.
+    // @Column은 각 필드에 속성을 지정해준다.
+    // @Transient 애너테이션이 붙어있는 필드는 영속성 처리에서 제외되기 때문에 DB데이터에 반영되지 않고, 해당 객체와 생명주기를 같이 한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
