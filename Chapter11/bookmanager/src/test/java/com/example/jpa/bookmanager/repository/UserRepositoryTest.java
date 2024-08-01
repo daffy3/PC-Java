@@ -92,6 +92,30 @@ class UserRepositoryTest {
         userRepository.saveAll(Lists.newArrayList(user1, user2, user3, user4, user5));
 
         System.out.println(userRepository.findByName("dennis"));
+
+        // ====================================================================================================
+
+        System.out.println("findByEmail(): " + userRepository.findByEmail("martin@gmail.com"));
+        System.out.println("getByEmail(): " + userRepository.getByEmail("martin@gmail.com"));
+        System.out.println("readByEmail(): " + userRepository.readByEmail("martin@gmail.com"));
+        System.out.println("queryByEmail(): " + userRepository.queryByEmail("martin@gmail.com"));
+        System.out.println("searchByEmail(): " + userRepository.searchByEmail("martin@gmail.com"));
+        System.out.println("streamByEmail(): " + userRepository.streamByEmail("martin@gmail.com"));
+        System.out.println("findUserByEmail(): " + userRepository.findUserByEmail("martin@gmail.com"));
+
+        // ====================================================================================================
+
+        System.out.println("findFirst1ByName(): " + userRepository.findFirst1ByName("martin"));
+        System.out.println("findTop1ByName(): " + userRepository.findTop1ByName("martin"));
+
+        // ====================================================================================================
+
+        System.out.println("findByEmailAndName(): " + userRepository.findByEmailAndName("martin@gmail.com", "martin"));
+        System.out.println("findByEmailOrName(): " + userRepository.findByEmailOrName("martin@gmail.com", "dennis"));
+        System.out.println("findByCreatedAt(): " + userRepository.findByCreatedAtAfter(LocalDateTime.now().minusDays(1L)));
+        System.out.println("findByCreatedAtBefore(): " + userRepository.findByCreatedAtBefore(LocalDateTime.now().minusDays(1L)));
+        System.out.println("findByIdAfter(): " + userRepository.findByIdAfter(4L));
+        System.out.println("findByCreatedAtGreaterThan(): " + userRepository.findByCreatedAtGreaterThan(LocalDateTime.now().minusDays(1L)));
     }
 
 }
